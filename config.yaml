@@ -7,7 +7,7 @@ title: "塬数AIoT边缘计算平台V2.0.0"
 # googleAnalytics: ""
 
 summaryLength: 20
-publishdir: "public/software/"
+publishdir: "public/"
 
 params:
   debug: true
