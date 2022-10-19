@@ -1,0 +1,89 @@
+<!-- Nav -->
+<nav class="navbar navbar-expand-xl navbar-light bg-light  py-4">
+  <div class="container">
+  
+    {{- $label_text := (.Site.Params.label.text | default .Site.Title) }}
+
+      <a class="logo" href="{{ .Site.Params.homeUrl }}" target="_blank" accesskey="h" title="{{ $label_text }} (Alt + h)">
+        <img
+          class="squeezeLogo"
+          src="{{.Site.Params.label.icon | relURL}}"
+          alt="{{ $label_text }}"
+          
+        ></img>
+        <!--<h3 style="margin-bottom: 0;">
+          <strong>{{.Site.Params.label.title | default .Site.Title | markdownify}}</strong>
+        </h3>-->
+      </a>
+    <!--<li class="toggle-container">
+      <input type="checkbox" id="switch" />
+      <label for="switch">
+        <i id="darkIcon" data-feather="moon"></i>
+        <i id="lightIcon" data-feather="sun"></i>
+      </label>
+    </li>-->
+  {{- $currentPage := . }}
+    {{ $baseUrl :=  .Site.BaseURL }}
+    {{ range .Site.Menus.main }}
+    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+    {{- $page_url:= $currentPage.Permalink | absLangURL }}
+    {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
+
+      <a 
+        href="javascript:void(0);" onclick="track(this, '{{ $.Site.Params.tjContactTag }}', '{{ replace .URL $baseUrl "/" }}?referer=landing_contact');" target="_blank" class="tjBtnContact" title="{{ .Name | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+        {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}
+      >
+      {{- if .Pre }}
+      <i data-feather="{{ .Pre | safeHTML }}"></i>
+      {{ end }}
+        <div {{- if eq $menu_item_url $page_url }}  {{- end }}>
+          <span  class="menu-active backpage">
+            {{- if .Title }}
+            {{ .Title | safeHTML }}
+            {{ end }}
+          </span>
+        </div>
+
+      </a>
+    {{ end }}
+<!--  <ul class="mobile-navigation">-->
+<!--    <li>-->
+<!--      <button id="menuOpen" onclick="openMobile()" aria-label="Menu closed">-->
+<!--        <i data-feather="menu"></i>-->
+<!--      </button>-->
+<!--      <button id="menuClose" onclick="openMobile()" aria-label="Menu opened">-->
+<!--        <i data-feather="x"></i>-->
+<!--      </button>-->
+<!--    </li>-->
+<!--  </ul>-->
+</div>
+</nav>
+<!-- ./ Nav -->
+
+<!--Sidebar -->
+<aside class="sidebar" id="mobileNav" style="display: none;">
+    <nav>
+      {{- $currentPage := . }}
+      <ul>
+        {{ $baseUrl :=  .Site.BaseURL }}
+        {{ range .Site.Menus.main }}
+        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+        {{- $page_url:= $currentPage.Permalink | absLangURL }}
+        {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
+        <li>
+          <a href="javascript:void(0);" onclick="track(this, '{{ $.Site.Params.tjContactTag }}', '{{ replace .URL $baseUrl "/" }}?referer=landing_contact');" target="_blank" title="{{ .Name | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+          {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
+            <span {{- if eq $menu_item_url $page_url }} class="menu-active" {{- end }}>
+              {{- if .Pre }}
+              <i data-feather="{{ .Pre | safeHTML }}"></i>
+              {{ end }} 
+              {{- if .Title }}
+              {{ .Title | safeHTML }}     
+              {{ end }}
+            </span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+</aside><!-- ./ Sidebar -->

@@ -1,0 +1,88 @@
+{{ define "main" }}
+{{- if not (.Site.Params.homepage.disableHeroSection) }}
+<section class="hero" style="background-image: url('{{ strings.TrimRight "/" site.BaseURL }}/{{.Site.Params.homepage.heroBackgroundImage}}'); ">
+    <header class="container">
+        <hgroup>
+            <h1 >{{.Site.Params.homepage.heroUpperTitle}}</h1>
+            <h1 style="color:#333;">{{.Site.Params.homepage.heroTitle}}</h1>
+            <h2>{{.Site.Params.homepage.heroDescription}}</h2>
+        </hgroup>
+        <div>
+            <a
+                    class="hero-buttons hero-btn-1"
+                    href="javascript:void(0);"
+                    onclick="track(this, 'landing_contact_click', '{{ .Site.Params.homepage.heroCTAPrimaryUrl }}');"
+                    target="_blank"
+                    role="button"
+            >{{.Site.Params.homepage.heroCTAPrimaryText}}</a
+            >
+        </div>
+    </header>
+</section>
+{{ end }}
+
+
+{{- if not (.Site.Params.homepage.disableBlogSection) }}
+<section id="products">
+    <hgroup class="text-center">
+        <h2>{{.Site.Params.homepage.blogTitle}}</h2>
+        <h3>{{.Site.Params.homepage.blogDescription}}</h3>
+    </hgroup>
+    <div class="container">
+        <div class="grid">
+             {{ range .Site.Params.homepage.bloglist }}
+            <a href="javascript:void(0);" onclick="track(this, '{{ .tjTag }}', '{{ strings.TrimRight "/" site.BaseURL }}/{{ .url }}');">
+                <article class="text-center article-box-item articleBox" >
+                    <hgroup class="titlebox">
+                        <h3 class="title">{{ .title }}</h3>
+                        <!-- <hr/> -->
+                        <p class="title-sub">
+                            {{ .description | plainify | htmlUnescape | truncate 100 }}{{ if
+                            .Truncated }} {{ end }}
+                        </p>
+                    </hgroup>
+                    <div class="intro">简介:</div>
+                    <div class="info"> {{ .introduction }} </div>
+                    <div class="lookall">查看详情</div>
+                </article>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="javascript:void(0);" onclick="track(this, '{{ .Site.Params.homepage.tjExpertTag }}', '{{ .Site.Params.homepage.seeMoreUrl }}');" target="_blank"><kbd class="expertask">{{.Site.Params.homepage.seeMoreText}}</kbd></a>
+    </div>
+</section>
+{{ end }}
+
+{{- if not (.Site.Params.homepage.disableAboutSection) }}
+{{ range .Site.Params.homepage.about }}
+<section>
+    <hgroup class="text-center">
+        <h2>{{.aboutTitle}}</h2>
+        <h3 style="margin: 10px 0">{{.aboutDescription}}</h3>
+    </hgroup>
+    <div class="container">
+        <div class="grid">
+            <div class="container" style="text-align: center;">
+                {{ if .url }}
+                <a href="{{ .url }}" {{ if .title }}title="{{ .title }}"{{ end }} target="_blank">
+                {{ end }}
+                <img
+                        src="{{ strings.TrimRight "/" site.BaseURL }}/{{.aboutImgUrl}}"
+                        alt="{{.Site.Params.author}}"
+                        height="950"
+                        layout="intrinsic"
+                ></img>
+                {{ if .url }}
+                </a>
+                {{ end }}
+            </div>
+<!--            <div class="container"></div>-->
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{ end }}

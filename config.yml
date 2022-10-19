@@ -1,0 +1,172 @@
+baseURL: "/landing/"
+# baseURL: "/"
+publishdir: "public/landing/"
+languageCode: en-us
+title: 塬数物联 - 复杂工业数据采集专家
+theme: piko
+paginate: "9"
+copyright: 塬数科技（无锡）有限公司 Copyright@2021 All Rights Reserved 苏ICP备20041532号-1
+googleAnalytics: # Enter Google Analytics ie. UA-012345678-9
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepWhitespace: false
+
+params:
+  debug: false
+  tjContactTag: "landing_contact_click"
+  homeUrl: "/edge?referer=landing_logo"
+  analytics:
+    google:
+      SiteVerificationTag: # Google Site Verification
+    yandex:
+      SiteVerificationTag: # Yandex Site Verification
+    bing:
+      SiteVerificationTag: # Bing Site Verification
+  env: production
+  author: Your Name
+  description: Your website description
+  math: false
+  images:
+  - "uploads/og.webp"
+  label:
+    title:
+    text: "塬数科技"
+    icon: uploads/img.png
+    iconHeight: "80"
+    iconWIdth: "80"
+  comments: true
+  mainSections:
+  - blog
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowRelated: true
+  CookieNotice: We use cookies to improve your experience on our site and to show
+    you relevant advertising.
+  CookieLink: /legal/privacy/#cookies-and-web-beacons
+  CookieButton: Cookies Policy
+  disableAnchoredHeadings: false
+  contactFormAction: # Get link from https://formsubmit.io or https://fabform.io
+  assets:
+    disableFingerprinting: false
+    favicon: uploads/favicon.ico
+    favicon16x16: uploads/favicon.ico
+    favicon32x32: uploads/favicon.ico
+    apple_touch_icon: uploads/favicon.ico
+    safari_pinned_tab: uploads/favicon.ico
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  homepage:
+    # Hero Section
+    tjExpertTag: "landing_expert_click"
+    disableHeroSection: false
+    heroUpperTitle: 
+    heroTitle: 塬数工业物联
+    heroDescription: 复杂工业数据采集专家
+    heroCTAPrimaryText: 联系我们
+    heroCTAPrimaryUrl: "/apply?referer=landing_contact"
+    heroCTASecondaryText: Contact Me
+    heroCTASecondaryUrl: "/apply?referer=landing_contact"
+    heroBackgroundImage: "uploads/1.png"
+    # Blog Section
+    disableBlogSection: false
+    blogTitle: 明星产品
+    blogDescription: 精于品质，忠于服务
+    seeMoreText: 专家咨询
+    seeMoreUrl: "/apply?referer=landing_expert"
+    bloglist:
+      - title: "塬数AIoT边缘计算平台V2.0.0"
+        description: "轻量级数据采集软件"
+        introduction: "开放式系统设计，集工业现场网络、数据采集、协议解析、边缘计算、时序存储、应用容器等核心能力为一体。有效整合设备连接、系统接入、数据资产、工业机理、边缘算力与组态模型等资源。"
+        url: "software/"
+        tjTag: "landing_software_click"
+      - title: "塬数数据采集网关SGW-01"
+        description: "软硬一体化工业数采网关"
+        introduction: "针对复杂工业环境专门打造，用于连接工业现场各类生产设备、PLC、仪表等；通过WiFi、4G等方式，将生产现场的数据上传至公有云或者用户指定位置。"
+        url: "integration/"
+        tjTag: "landing_integration_click"
+
+    # About Section    
+    disableAboutSection: false
+    about:
+      - aboutTitle: 我们可接入的设备/数据类型
+        aboutDescription: 支持定制开发
+        aboutImgUrl: "uploads/2.png"
+      - aboutTitle: 我们的解析能力
+        aboutDescription: 内置主流南向协议，支持定制开发
+        aboutImgUrl: "uploads/3.png"
+      - aboutTitle: 我们提供广泛的数据分享服务
+        aboutDescription: 适配主流北向协议，支持定制开发
+        aboutImgUrl: "uploads/4.png"
+      - aboutTitle: 选择我们的理由
+        aboutDescription: 管家式服务，让数采更简单
+        aboutImgUrl: "uploads/5.png"
+      - aboutTitle: 行业应用场景
+        aboutDescription: 支持定制开发
+        aboutImgUrl: "uploads/6.png"
+        title: "申请加入您的行业"
+        url: "/apply?referer=landing_industry"
+
+
+    aboutContent: Hi guys. This is where you put something about yourself.
+    # Portfolio Section
+    disablePortfolioSection: false
+    portfolioTitle: Portfolio
+    portfolioDescription: Some of my works
+    portfolio:
+    - imageUrl: uploads/portfolio-1.webp
+      alt: # image alt for better SEO
+      description: Portfolio One.
+      websiteUrl: #
+    - imageUrl: uploads/portfolio-2.webp
+      alt: # image alt for better SEO
+      description: Portfolio Two.
+      websiteUrl: #
+    - imageUrl: uploads/portfolio-3.webp
+      alt: # image alt for better SEO
+      description: Portfolio Three.
+      websiteUrl: #
+  # Search Options (https://fusejs.io/)
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: "0"
+    distance: "1000"
+    threshold: "0.4"
+    minMatchCharLength: "0"
+    keys:
+    - title
+    - permalink
+    - summary
+    - content
+  plugins:
+    css:
+    - link: plugins/css/pico.min.css
+    js:
+    - link: plugins/js/feather.min.js
+menus:
+  main: # Main Menu
+  - name: 联系我们
+    title: 联系我们
+    url: "/apply"
+    weight: "20"
+disableKinds:
+  - taxonomy
+  - term
