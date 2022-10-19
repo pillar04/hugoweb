@@ -1,4 +1,4 @@
-baseURL: "/landing/software/"
+baseURL: "/"
 # baseURL: "/"
 theme: "up-business-theme"
 languageCode: "en-us"
@@ -10,7 +10,7 @@ summaryLength: 20
 publishdir: "public/software/"
 
 params:
-  debug: false
+  debug: true
   title: "塬数AIoT边缘计算平台V2.0.0"
   description: "塬数AIoT边缘计算平台V2.0.0"
   homeUrl: "/edge?referer=software_logo"
