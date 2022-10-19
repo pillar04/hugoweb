@@ -1,0 +1,6 @@
+enabled: true
+id: "framework"
+
+content:
+  title: "产品架构"
+  image: "images/product-framework.png"

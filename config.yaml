@@ -1,4 +1,80 @@
-module:
-  module.hugoVersion:
-    extended: true
-    min: "0.88.1"
+baseURL: "/landing/software/"
+# baseURL: "/"
+theme: "up-business-theme"
+languageCode: "en-us"
+
+title: "塬数AIoT边缘计算平台V2.0.0"
+# googleAnalytics: ""
+
+summaryLength: 20
+publishdir: "public/software/"
+
+params:
+  debug: false
+  title: "塬数AIoT边缘计算平台V2.0.0"
+  description: "塬数AIoT边缘计算平台V2.0.0"
+  homeUrl: "/edge?referer=software_logo"
+  images:
+    - "images/hero-image.png"
+
+
+  logo: "arrow-up.png"
+
+  favicons:
+    themeColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF"
+    faviconColor: "#000000"
+
+  social:
+    dribbble: "#"
+    instagram: "#"
+    facebook: "#"
+    twitter: "#"
+
+  location:
+    - "3891 Ranchview Dr. Richardson, California 62639"
+    - "4517 Washington Ave. Manchester, Kentucky 39495"
+
+  contact:
+    - "trungkienspktnd@gamail.com"
+    - "207.555.0119"
+
+  copyright: "© 2022 Up Business All Rights Reserved"
+
+menus:
+  main:
+    - name: ""
+      url: "../"
+      weight: 1
+
+  buttons:
+    - name: "返回主页"
+      url: "/landing/#products"
+      weight: 5
+      pre: "btn btn-primary text-light"
+
+  footer:
+    - name: "Home"
+      url: "/#hero"
+      weight: 1
+
+    - name: "How we work"
+      url: "/#"
+      weight: 2
+
+    - name: "Our team"
+      url: "/#"
+      weight: 3
+
+    - name: "Pricing"
+      url: "/#"
+      weight: 4
+
+    - name: "Blog"
+      url: "/blog"
+      weight: 5
+
+disableKinds:
+  - taxonomy
+  - term
+

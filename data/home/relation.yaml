@@ -1,0 +1,34 @@
+enabled: true
+id: "relation"
+
+content:
+  title: "相关资料"
+#  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec quam nibh elit pellentesque velit netus suspendisse. Sed enim, pretium, montes, in ut dolor urna."
+  button:
+    label: "在线试用"
+    url: "https://cloud.c2matica.com/iot/#/iotlogin?referer=software_trial"
+    tjTrialTag: "software_trial_click"
+  cards:
+    - image: "images/relation-1.png"
+      title: "产品白皮书"
+      text: "介绍产品可以帮您解决的问题以及产品的应用场景"
+      button:
+        label: "下载"
+        img: "images/testimonials-left-quote.png"
+        url: "/apply?referer=software_whitepaper_download"
+
+    - image: "images/relation-2.png"
+      title: "产品说明书"
+      text: "介绍产品的主要功能 "
+      button:
+        label: "下载"
+        img: "images/testimonials-left-quote.png"
+        url: "/apply?referer=software_instruction_download"
+
+    - image: "images/relation-3.png"
+      title: "用户手册"
+      text: "介绍产品的使用方法 "
+      button:
+        label: "下载"
+        img: "images/testimonials-left-quote.png"
+        url: "/apply?referer=software_manual_download"

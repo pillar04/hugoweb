@@ -1,0 +1,59 @@
+enabled: true
+id: "testimonials"
+
+content:
+  title: "产品优势"
+
+  assist:
+    title: "安装助手"
+    image: "images/zhushou.png"
+    btntitle1: "Modbus数据模拟器"
+    btnurl1: "https://www.modbustools.com/download.html"
+    btntitle2: "OPC UA数据模拟器"
+    btnurl2: "https://www.unified-automation.com/downloads/opc-ua-servers.html"
+
+  list:
+    - text: "边缘/本地计算能力"
+      circleimage: "images/adc-1.png"
+      image: "images/ad-1.png"
+      txt: "对于采集数据具备边缘端预处理计算能力，提供AI服务得调用与管理能力。"
+
+    - text: "数据低延迟"
+      circleimage: "images/adc-2.png"
+      image: "images/ad-2.png"
+      txt: "故据采集及敌据预处理毫秒级延迟，高效转发至不同目标平台。"
+
+    - text: "应用灵活部署"
+      circleimage: "images/adc-3.png"
+      image: "images/ad-3.png"
+      txt: "支持用本革法、应用容变等部署，支持远程应用下载、配置及更新。"
+
+    - text: "灵活的网络部署方案"
+      circleimage: "images/adc-4.png"
+      image: "images/ad-4.png"
+      txt: "支持总线制集中部署，或网关式分散安装，应对工厂复杂条件下的数据采集。"
+
+    - text: "自主可控，信创适配"
+      circleimage: "images/adc-5.png"
+      image: "images/ad-5.png"
+      txt: "与数家企业完成兼容性认证，兼容国产操作系统、CPU及数据库，满足自主、安全、可控的要求。"
+
+    - text: "跨平台安装部署"
+      circleimage: "images/adc-6.png"
+      image: "images/ad-6.png"
+      txt: "能够应对产线设备及上位系统各类款硬件架构，低侵入性，无依赖，跨平台运行。"
+
+    - text: "网络异常与断点续传"
+      circleimage: "images/adc-7.png"
+      image: "images/ad-7.png"
+      txt: "具备断点续传能力，能够缓存既有采集数据，根据网络状况自动恢复报送，可自定义补传策略。"
+
+    - text: "现场总线能力"
+      circleimage: "images/adc-8.png"
+      image: "images/ad-8.png"
+      txt: "不仅仅是数据采集，同时支持反向控制，兼容传统OPcServer需求作为现场总线,服务于采集和控制。"
+
+    - text: "用户友好型"
+      circleimage: "images/adc-9.png"
+      image: "images/ad-9.png"
+      txt: "顾自动化与信总化两类人群，边线端数据采集参考自动化配置方式，零学习门槛。"

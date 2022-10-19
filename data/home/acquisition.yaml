@@ -1,0 +1,6 @@
+enabled: true
+id: "acquisition"
+
+content:
+  title: "采集能力"
+  image: "images/product-acquisition.png"

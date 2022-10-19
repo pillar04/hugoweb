@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
+  <div class="container">
+    <a href="{{ .Site.Params.homeUrl }}" target="_blank">
+      {{ partial "utilities/image.html" "images/logoimage.png" }}
+<!--      <span class="fs-3 fw-semibold text-uppercase text-primary">{{ .Site.Title }}</span>-->
+<!--    </a>-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+        {{ range .Site.Menus.main }}
+          <li class="nav-item text-center">
+            <a class="nav-link text-primary px-4" href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+      <ul class="navbar-nav ms-xl-3 mb-2 mb-xl-0">
+        {{ range .Site.Menus.buttons }}
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary text-light px-4 backpage" href="{{ replace .URL site.BaseURL "/" }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar-toggler{
+     display: none !important;
+  }
+  .squeezeLogo{
+    width: 6vw;
+    height: 3vw;
+  }
+  @media (max-width: 1199px) {
+    .squeezeLogo{
+      width: 80px;
+      height: 40px;
+    }
+  }
+  .backpage{
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(84deg, rgba(0,82,218,0.8) 0%, rgba(96,165,255,0.8) 100%);
+    border-radius: 62px;
+    font-weight: 600;
+  }
+  .backpage:hover{
+    color: #FFFFFF;
+    background: linear-gradient(84deg, #0052da 0%, #60a5ff 100%);
+  }
+</style>

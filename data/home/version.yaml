@@ -1,0 +1,8 @@
+enabled: true
+id: "version"
+
+content:
+  title: "产品版本"
+  items:
+    - "images/version-1.png"
+    - "images/version-2.png"

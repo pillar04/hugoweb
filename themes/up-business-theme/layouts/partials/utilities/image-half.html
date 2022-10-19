@@ -1,0 +1,3 @@
+{{ with resources.Get . }}
+  <img style="width: 100%;" src="{{ .Permalink }}" alt="{{ .Title }}">
+{{ end }}

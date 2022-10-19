@@ -1,0 +1,32 @@
+.section.portfolio {
+  .portfolio-feature {
+    >div:nth-child(1) {
+      padding-left: 35px;
+    } 
+    >div:nth-child(2) {
+      padding-right: 35px;
+    }
+    h3 {
+      font-size: 28px;
+      color: #3d90f7;
+      margin-bottom: 14px;
+    }
+    p {
+      margin-bottom: 12px;
+      span:nth-child(1) {
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+      }
+      span:nth-child(2) {
+        font-size: 16px;
+        color: #333;
+      }
+    }
+  }
+  .portfolio-feature:nth-child(odd) {
+    @media (min-width: 1200px) {
+      flex-direction: row-reverse;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<section class="section brands py-5">
+  <div class="container">
+    <div class="row">
+      {{ with .content.title }}
+        <div class="col-12">
+          <h3 class="fw-semibold text-center pb-4">{{ . }}</h3>
+        </div>
+      {{ end }}
+    </div>
+    <div class="row align-items-center justify-content-center">
+      {{ range $i, $e := .content.items }}
+      <div class="col-12 px-3 my-2 col-xl-6 text-center">
+        <a style="width: 60%;" class="btn btn-primary text-light px-4 my-1" href='{{ $e.url }}'>{{ $e.label }}</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

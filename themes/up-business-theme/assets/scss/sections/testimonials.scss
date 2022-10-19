@@ -1,0 +1,52 @@
+.section.testimonials {
+  
+  .preponderance .relatedPicture{
+    width: 96px!important;
+    height: 96px;
+  }
+  .card-body-box {
+    .card-text {
+      font-size: 20px;
+      color: #0a3971;
+    }
+    span {
+      font-size: 16px;
+      color: #333;
+    }
+  }
+  .footer-install {
+    position: relative;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .relatedPicture {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .title {
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .btns {
+      .btn {
+        font-size: 18px;
+        color: #fff;
+        width: 225px;
+        height: 58px;
+        line-height: 58px;
+        text-align: center;
+        background-color: #3d90f7;
+        margin: 0 15px;
+        padding: 0;
+      }
+    }
+  }
+}

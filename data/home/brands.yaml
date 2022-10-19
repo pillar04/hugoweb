@@ -1,0 +1,11 @@
+enabled: true
+id: "brands"
+
+content:
+  title: "安装助手"
+  items:
+    - label: "OPC UA 数据模拟器"
+      url: ""
+
+    - label: "Modbus 数据模拟器"
+      url: ""

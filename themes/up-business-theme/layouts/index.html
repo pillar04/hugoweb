@@ -1,0 +1,11 @@
+{{ define "main" }}
+  {{ with .Site.Data.home.hero }}{{ partial "sections/hero.html" . }}{{ end }}
+  {{ with .Site.Data.home.version }}{{ partial "sections/version.html" . }}{{ end }}
+  {{ with .Site.Data.home.framework }}{{ partial "sections/framework.html" . }}{{ end }}
+  {{ with .Site.Data.home.acquisition }}{{ partial "sections/acquisition.html" . }}{{ end }}
+  {{ with .Site.Data.home.corefunc }}{{ partial "sections/corefunc.html" . }}{{ end }}
+  {{ with .Site.Data.home.relation }}{{ partial "sections/relation.html" . }}{{ end }}
+  {{ with .Site.Data.home.advantage }}{{ partial "sections/advantage.html" . }}{{ end }}
+
+<!--  {{ with .Site.Data.home.brands }}{{ partial "sections/brands.html" . }}{{ end }}-->
+{{ end }}

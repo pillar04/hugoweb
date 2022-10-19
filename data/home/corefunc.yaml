@@ -1,0 +1,68 @@
+enabled: true
+id: "corefunc"
+
+content:
+  - image: "images/core-1.png"
+    title: "01  数据管理"
+    text: ""
+    textlist:
+      - title: "数据计算："
+        text: "实时计算数据点值，低延迟，高可靠；"
+      - title: "计算规则："
+        text: "平台内置进制转换、幅度滤波、线性计算、开关量取反等计算规则，支持通过Lua脚本，自定义计算规则；"
+      - title: "数据储存："
+        text: "支持高并发写入海量时序数据，高性能压缩数据、实现工业数据全量储存的目标；"
+      - title: "数据查询："
+        text: "支持海量数据实时预览、结构化检索网关、应用下数据点的实时数据及历史数据"
+
+  - image: "images/core-2.png"
+#    pretitle: "Portfolio Service"
+    title: "02  数据转发"
+    text: ""
+    textlist:
+      - title: "平台转发："
+        text: "支持转发数据到物联网平台、HTTP Server、MQTT Server 、Microsoft Azure，可通过定制化开发， 将数据转发至其他第三方平台，支持SDK拓展；"
+      - title: "转发方式："
+        text: "支持通过标签、应用转发方式，将标签、应用的全量数据或批量数据转发至其他平台；"
+      - title: "转发监控："
+        text: "转发时长、转发数据量实时监控，转发启停状态自控制。"
+
+
+  - image: "images/core-3.png"
+#    pretitle: "Portfolio Service"
+    title: "03  组态管理"
+    text: ""
+    textlist:
+      - title: "快捷创建："
+        text: "快速拖拽组件，搭建可视化场景；"
+      - title: "丰富图表："
+        text: "内置100+仿真组态、可视化图表，且可自由扩展；"
+      - title: "数据呈现："
+        text: "提供单点、多点实时呈现、数据降频及补值策略；"
+      - title: "远程反控："
+        text: "实时写入数据值，远程反控设备；"
+      - title: "报表发布："
+        text: "在线预览及发布，可直接嵌入大屏、应用系统；"
+      - title: "兼容适配："
+        text: "支持PC端及移动端查看已发布场景、反控设备。"
+
+  - image: "images/core-4.png"
+#    pretitle: "Portfolio Service"
+    title: "04  运维监控"
+    text: "实时监控： 实时监控网关cpu、内存、磁盘、网络收发指标；
+    网关告警： 自定义网关告警规则，邮件、短信实时通知；
+    审计日志： 记录平台用户所有关键操作，为恢复故障及定责提供依据；
+    批量导出： 批量导出审计日志到本地；
+    远程下发： 远程下发文件到网关指定路径或下发软件到网关并自动安装。"
+    textlist:
+      - title: "实时监控："
+        text: "实时监控网关cpu、内存、磁盘、网络收发指标；"
+      - title: "网关告警："
+        text: "自定义网关告警规则，邮件、短信实时通知；"
+      - title: "审计日志："
+        text: "记录平台用户所有关键操作，为恢复故障及定责提供依据；"
+      - title: "批量导出："
+        text: "批量导出审计日志到本地；"
+      - title: "远程下发："
+        text: "远程下发文件到网关指定路径或下发软件到网关并自动安装。"
+

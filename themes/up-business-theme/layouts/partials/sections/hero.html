@@ -1,0 +1,64 @@
+<section class="section hero py-5">
+  <div class="container">
+    <div class="row flex-column flex-xl-row-reverse">
+      <div class="col-12 col-xl-6  d-flex flex-column justify-content-center hero-image">
+        {{ partial "utilities/image-fluid" "images/hero-image.png" }}
+      </div>
+      <div class="col-12 col-xl-6 d-flex flex-column justify-content-center">
+        <h1 class="hero-title text-center text-xl-start pb-4">{{ .content.title | markdownify }}<small style="color: #0a53be;">{{ .content.mintitle }}</small></h1>
+        {{ with .content.text }}
+          <p class="text-center text-black-61 text-xl-start pb-4">{{ . | markdownify }}</p>
+        {{ end }}
+        <div class="d-flex flex-column flex-xl-row bannerText">
+          <div>
+            {{ with .content.buttonPrimary }}
+            <a class="btn btn-primary text-light px-4 my-1 online" href="javascript:void(0);" onclick="track(this, '{{ .tjTrialTag }}', '{{ .url }}');" target="_blank">{{ .label }}</a>
+            {{ end }}
+          </div>
+          <div>
+            {{ with .content.contactUs }}
+              <a class="btn px-4 my-1 ms-xl-4 gratis" href="{{ .url }}" target="_blank">{{ .label }}</a>
+            {{ end }}
+          </div>
+          
+          <!-- {{ with .content.buttonSecondary }}
+            <a class="btn px-4 my-1 ms-xl-4 gratis" href="javascript:void(0);" onclick="track(this, '{{ .tjDownloadTag }}', '{{ .url }}');" target="_blank">{{ .label }}</a>
+          {{ end }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .online{
+    width: 142px;
+    height: 50px;
+    padding: 0;
+    line-height: 50px;
+    background: #1c5cc8;
+    border-color: #1c5cc8;
+    font-size: 18px;
+  }
+  .online:hover{
+    background: #4584f0;
+    border-color: #4584f0;
+  }
+  .gratis{
+    width: 142px;
+    height: 50px;
+    padding: 0;
+    line-height: 50px;
+    border-color: #1c5cc8 !important;
+    color: #1c5cc8;
+    font-size: 18px;
+  }
+  .gratis:hover{
+    color: #1c5cc8;
+    background: #b7d2ff;
+  }
+  @media (max-width: 1199px){
+    .bannerText{
+      text-align: center;
+    }
+  }
+</style>

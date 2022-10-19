@@ -1,0 +1,66 @@
+<section class="section services py-5">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-12 col-xl-6">
+        {{ with .content.title }}
+          <h3 class="fw-bold text-center pb-3">{{ . }}</h3>
+        {{ end }}
+        {{ with .content.text }}
+          <p class="text-black-61 text-center pb-3">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
+    <div class="row g-5 related">
+      {{ range .content.cards }}
+        <div class="col-12 col-xl-4">
+          <div class="card bg-blue-16 border-0 border-radius-34 p-4" style="height: 446px">
+            <div class="card-body text-center">
+<!--              {{ with .title }}<h4 class="card-title text-center text-primary pb-4">{{ . }}</h4>{{ end }}-->
+              {{ with .image }} {{ partial "utilities/image-fluid.html" . }} {{ end }}
+              {{ with .text }}<p class="card-text text-black-61 pb-4" style="padding-top:20px;min-height: 100px;color: white">{{ . }}</p>{{ end }}
+              {{ with .button }}<a class="btn btn-outline-primary px-4" href="{{ .url }}" target="_blank">{{ .label }}</a>{{ end }}
+<!--              {{ partial "utilities/image.html" .button.img }}-->
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    <div class="text-center" style="margin-top: 50px;">
+      {{ with .content.button }}
+      <a class="btn btn-primary text-light px-4 my-1 about-info-btn onlines" style="color: #FFFFFF !important;" href="javascript:void(0);" onclick="track(this, '{{ .tjTrialTag }}', '{{ .url }}');" target="_blank">{{ .label }}</a>
+      {{ end }}
+    </div>
+  </div>
+  </div>
+</section>
+<style>
+    .section.services .onlines{
+        background: #1c5cc8;
+        border-color: #1c5cc8;
+    }
+    .section.services .onlines:hover{
+        background: #4584f0;
+        border-color: #4584f0;
+    }
+    .related>div:nth-child(1) .card{
+        background: #8D94FF;
+    }
+    .related>div:nth-child(2) .card{
+        background: #B28BFA;
+    }
+    .related>div:nth-child(3) .card{
+        background: #87C2FE;
+    }
+    .related .card-body>a{
+        background: transparent !important;
+        border-color: white;
+        color: white;
+    }
+    .related .card-body>a:hover{
+      background: white !important;
+      color: #8D94FF;
+    }
+    .related .relatedPicture{
+        width: 70% !important;
+    }
+</style>

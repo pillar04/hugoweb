@@ -1,0 +1,47 @@
+<section class="section testimonials">
+  <div class="container">
+    <div class="row pb-5">
+      <div class="col-12">
+        {{ with .content.title }}
+          <h3 class="fw-bold text-center pb-3">{{ . }}</h3>
+        {{ end }}
+      </div>
+    </div>
+    <div class="row preponderance">
+      {{ range $i, $e := .content.list }}
+        <div class="col-12 col-xl-4 text-center">
+          <div class="card border-0  border-radius-34 p-4">
+            <div class="card-body card-body-box">
+              {{ with $e.circleimage }}
+              {{ partial "utilities/image-fluid.html" . }}
+              {{ end }}
+
+              <p class="card-text text-black-61">"{{ $e.text }}"</p>
+              {{ with $e.txt }}
+              <span>{{ . }}</span>
+              {{ end }}
+            </div>
+
+          </div>
+        </div>
+
+      {{ end }}
+    </div>
+  </div>
+  
+  <div class="footer-install">
+    {{ partial "utilities/image-fluid.html" .content.assist.image }}
+    <div class="title" style="margin-bottom: 1.5vw;">
+      {{ .content.assist.title }}
+    </div>
+    <div class="btns text-center">
+      <a href="{{ .content.assist.btnurl1 }}" style="margin-bottom: 1vw;" target="_blank" class="btn">{{ .content.assist.btntitle1 }}</a>
+      <a href="{{ .content.assist.btnurl2 }}" style="margin-bottom: 1vw;" target="_blank" class="btn">{{ .content.assist.btntitle2 }}</a>
+    </div>
+  </div>
+</section>
+<style>
+  .btns > a:hover{
+    background: #591afa !important;
+  }
+</style>
