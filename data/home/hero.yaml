@@ -1,22 +1,14 @@
+---
 enabled: true
-id: "hero"
-
+id: hero
 content:
-  title: "塬数AIoT边缘计算平台"
-  mintitle: "V2.0.0"
-  text: "针对复杂工业环境专门打造，用于连接工业现场各类生产设备、PLC、仪表等；通过WiFi、4G等方式，将生产现场的数据上传至公有云或者用户指定位置。"
-
+  title: 塬数AIoT边缘计算平台
+  mintitle: V2.0.0
+  text: 1111--针对复杂工业环境专门打造，用于连接工业现场各类生产设备、PLC、仪表等；通过WiFi、4G等方式，将生产现场的数据上传至公有云或者用户指定位置。
   buttonPrimary:
-    label: "在线试用"
-    url: "https://cloud.c2matica.com/iot/#/iotlogin?referer=software_trial"
-    tjTrialTag: "software_trial_click"
-
+    label: 在线试用
+    url: https://cloud.c2matica.com/iot/#/iotlogin?referer=software_trial
+    tjTrialTag: software_trial_click
   contactUs:
-    label: "联系我们"
+    label: 联系我们
     url: "/apply?referer=software_contact"
-
-  # buttonSecondary:
-  #   label: "免费下载"
-  #   url: "/apply?referer=software_download"
-  #   tjDownloadTag: "software_download_click"
-
