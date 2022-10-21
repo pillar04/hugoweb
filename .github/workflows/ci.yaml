@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: 'Building...'
       uses: reuixiy/hugo-deploy@v1
+      with:
+        token: ${{ secrets.DEPLOY_KEY }}
       env:
         DEPLOY_REPO: pillar04/pillar04.github.io
         DEPLOY_BRANCH: build
