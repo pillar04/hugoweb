@@ -1,0 +1,13 @@
+name: test hugoweb
+on: 
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  myjob:
+    name: pack
+    steps: 
+      - name: first
+        run: hugo -D
