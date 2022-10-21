@@ -8,6 +8,7 @@ on:
 jobs:
   myjob:
     name: pack
+    runs-on: 	windows-2019
     steps: 
       - name: first
         run: hugo -D
