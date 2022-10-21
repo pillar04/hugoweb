@@ -9,12 +9,13 @@ sections:
   label: themes
   create: all
   match: "**/**"
-  new_doc_ext: ".html .htm"
+  new_doc_ext: html .htm
 - type: directory
-  path: ''
+  path: data
   label: data
   create: all
   match: "**/**"
+  new_doc_ext: ".yaml"
 - type: directory
   path: content/homepage
   label: Homepage
