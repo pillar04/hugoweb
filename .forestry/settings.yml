@@ -5,6 +5,17 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: themes
+  label: themes
+  create: all
+  match: "**/**"
+  new_doc_ext: ".html .htm"
+- type: directory
+  path: ''
+  label: data
+  create: all
+  match: "**/**"
+- type: directory
   path: content/homepage
   label: Homepage
   create: all
