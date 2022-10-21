@@ -12,3 +12,9 @@ jobs:
     steps:
     - name: 'Building...'
       uses: reuixiy/hugo-deploy@v1
+      env:
+        DEPLOY_REPO: pillar04/pillar04.github.io
+        DEPLOY_BRANCH: build
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        TZ: Asia/Shanghai
