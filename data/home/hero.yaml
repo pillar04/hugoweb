@@ -2,7 +2,7 @@
 enabled: true
 id: hero
 content:
-  title: 塬数AIoT边缘计算平台
+  title: 塬数AIoT边缘计算平台---修改了标题
   mintitle: V2.0.0
   text: 1111--针对复杂工业环境专门打造，用于连接工业现场各类生产设备、PLC、仪表等；通过WiFi、4G等方式，将生产现场的数据上传至公有云或者用户指定位置。
   buttonPrimary:
